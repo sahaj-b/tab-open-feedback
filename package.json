@@ -1,10 +1,10 @@
 {
-  "name": "middle-click-feedback",
+  "name": "tab-open-feedback",
   "version": "1.0.0",
-  "description": "Visual feedback animation when middle-clicking on links",
+  "description": "Visual feedback animation when middle-clicking & ctrl+clicking on links",
   "scripts": {
-    "build": "web-ext build --source-dir . --artifacts-dir dist",
-    "build:firefox": "web-ext build --source-dir . --artifacts-dir dist-firefox",
+    "build": "web-ext build --source-dir . --artifacts-dir dist --overwrite-dest",
+    "build:firefox": "web-ext build --source-dir . --artifacts-dir dist --overwrite-dest",
     "lint": "web-ext lint --source-dir .",
     "test": "echo \"No tests specified\" && exit 0"
   },
