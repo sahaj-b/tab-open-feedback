@@ -1,0 +1,22 @@
+{
+  "name": "middle-click-feedback",
+  "version": "1.0.0",
+  "description": "Visual feedback animation when middle-clicking on links",
+  "scripts": {
+    "build": "web-ext build --source-dir . --artifacts-dir dist",
+    "build:firefox": "web-ext build --source-dir . --artifacts-dir dist-firefox",
+    "lint": "web-ext lint --source-dir .",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "devDependencies": {
+    "web-ext": "^9.2.0"
+  },
+  "keywords": [
+    "browser-extension",
+    "chrome",
+    "firefox",
+    "manifest-v3"
+  ],
+  "author": "",
+  "license": "MIT"
+}
