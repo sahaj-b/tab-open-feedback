@@ -15,7 +15,11 @@ Browser extension that plays a visual animation when you middle-click and ctrl+c
 3. Select `manifest.json`
 
 ### Firefox based (permanent)
-Install from [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/tab-open_feedback/)
+Go to `about:config`, set `xpinstall.signatures.required` to `false`. Then go to `about:addons` → click the gear icon → "Install Add-on From File..." → select the zip file from the `dist` folder after running `pnpm build:firefox`.  
+
+OR  
+
+Install from [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/tab-open_feedback/)  
 
 ## Development
 
