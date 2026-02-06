@@ -1,9 +1,11 @@
 {
   "manifest_version": 3,
   "name": "Tab Open Feedback",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Visual feedback animation when middle-clicking or Ctrl+click on links",
-  "permissions": [],
+  "permissions": [
+    "tabs"
+  ],
   "browser_specific_settings": {
     "gecko": {
       "id": "sahaj@tab-open-feedback",
@@ -13,6 +15,9 @@
         ]
       }
     }
+  },
+  "background": {
+    "service_worker": "background.js"
   },
   "host_permissions": [
     "<all_urls>"
