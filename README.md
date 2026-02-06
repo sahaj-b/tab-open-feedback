@@ -10,11 +10,13 @@ Browser extension that plays a visual animation when you middle-click and ctrl+c
 3. Click "Load unpacked" → select this folder
 
 ### Firefox based (temporary)
-1. Open `about:debugging`
-2. Click "This Firefox" → "Load Temporary Add-on"
-3. Select `manifest.json`
+1. In `manifest.json`, replace `"service_worker": "background.js",`(line 20) with `"scripts": ["background.js"],`
+2. Open `about:debugging`
+3. Click "This Firefox" → "Load Temporary Add-on"
+4. Select `manifest.json`
 
 ### Firefox based (permanent)
+Do step 1 from the temporary installation, then:  
 Go to `about:config`, set `xpinstall.signatures.required` to `false`. Then go to `about:addons` → click the gear icon → "Install Add-on From File..." → select the zip file from the `dist` folder after running `pnpm build:firefox`.  
 
 OR  
