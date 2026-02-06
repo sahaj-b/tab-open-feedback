@@ -22,16 +22,17 @@
 				lastClick = {
 					x: event.clientX,
 					y: event.clientY,
-					time: Date.now()
+					time: Date.now(),
 				};
 			}
 		}
 	});
 
-	chrome.runtime.onMessage.addListener((request) => {
+	chrome.runtime.onMessage.addListener((request, _, __) => {
 		if (request.action === "tabOpened" && lastClick) {
 			const now = Date.now();
-			if (now - lastClick.time < 500) {
+			const timeDiff = now - lastClick.time;
+			if (timeDiff < 500) {
 				createRipple(lastClick.x, lastClick.y);
 				lastClick = null;
 			}
